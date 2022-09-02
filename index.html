@@ -15,8 +15,18 @@
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="img/robotron.png" alt="Robotron" id="robotron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+            <div class="robo">
+                <img class="robo__imagem" src="img/robotron-azul.png" data-cor-robo="azul" alt="Robotron" id="robotron">
+                <div class="robo__cores">
+                    <button class="robo__botao-cor" data-cor-ativa data-opcao-cor="azul" aria-label="altera cor do robô para azul"></button>
+                    <button class="robo__botao-cor" data-opcao-cor="amarelo" aria-label="altera cor do robô para amarelo"></button>
+                    <button class="robo__botao-cor" data-opcao-cor="branco" aria-label="altera cor do robô para branco"></button>
+                    <button class="robo__botao-cor" data-opcao-cor="preto" aria-label="altera cor do robô para preto"></button>
+                    <button class="robo__botao-cor" data-opcao-cor="rosa" aria-label="altera cor do robô para rosa"></button>
+                    <button class="robo__botao-cor" data-opcao-cor="vermelho" aria-label="altera cor do robô para vermelho"></button>
+                </div>
+            </div>
         </section>
 
         <section class="box estatisticas">

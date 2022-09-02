@@ -1,5 +1,12 @@
+//botões de aumentar/diminuir número de peças
 const ajustes = document.querySelectorAll('[data-operacao]');
+
+//elementos com os valores das estatísticas
 const statsAtuais = document.querySelectorAll('[data-stats]');
+
+//cor do robô
+const corAtual = document.querySelector('[data-cor-robo]');
+const botoesCor = document.querySelectorAll('[data-opcao-cor]');
 
 //objeto com os valores fornecidos por cada peça para as estatísticas do robô
 //possuem os mesmos nomes declarados nos data attributes no HTML
@@ -40,16 +47,23 @@ const statsPorPeca = {
     }
 }
 
-//adiciona evento de click nos botões de ajuste de cada peça
-ajustes.forEach((ajuste) => {
-    ajuste.addEventListener('click', (e) => {
-        const operacao = e.target.dataset.operacao;
-        const peca = e.target.parentNode;
 
-        ajustaQuantidadePecas(operacao, peca);
-        atualizaStats();
-    });
-})
+
+// --------------------------------- FUNÇÕES
+
+//altera a cor do robo
+function alteraCorRobo(cor){
+    corAtual.src = `img/robotron-${cor}.png`
+}
+
+//muda o estilo do botão selecionado para alterar a cor
+function alteraEstiloBotao(botao){
+    //remove o atributo do botão ativo atual
+    document.querySelector('[data-cor-ativa]').removeAttribute('data-cor-ativa');
+
+    //adiciona o atributo ao botão selecionado
+    botao.setAttribute('data-cor-ativa', '');
+}
 
 //ajusta a quantidade de peças de acordo com a operação a ser feita
 function ajustaQuantidadePecas(operacao, peca){
@@ -95,3 +109,27 @@ function atualizaStats(){
         stat.textContent = novosStats[stat.dataset.stats];
     })
 }
+
+
+// --------------------------------- EVENTOS
+
+//adiciona evento de clique nos botões de ajuste de cada peça
+ajustes.forEach((ajuste) => {
+    ajuste.addEventListener('click', (e) => {
+        const operacao = e.target.dataset.operacao;
+        const peca = e.target.parentNode;
+
+        ajustaQuantidadePecas(operacao, peca);
+        atualizaStats();
+    });
+})
+
+//adiciona evento de clique para alteração da cor do robo
+botoesCor.forEach((botao) => {
+    botao.addEventListener('click', (e) => {
+        corEscolhida = e.target.dataset.opcaoCor;
+        alteraCorRobo(corEscolhida);
+        alteraEstiloBotao(botao);
+    })
+})
+

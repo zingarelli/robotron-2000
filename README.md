@@ -1,9 +1,9 @@
-# Robotron 2000
+# Robotron 2000 🤖
 Aprendendo JavaScript, brincando de alterar os stats de um robô para salvar a Terra.
 
 Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e peças. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças, o que irá influenciar nos stats do robô. 
 
-Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças. Utilizou-se também de data-attributes para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
+Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças. Utilizou-se também de "data attributes" para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
 
 ## Créditos
 **Instrutor:** [Pedro Marins](https://github.com/pedromarins).
@@ -24,7 +24,8 @@ Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do D
 
 - O CSS foi adaptado para melhorar o posicionamento dos elementos para diferentes larguras, utilizando Flexbox. Também alterei o CSS do box em que ficam as peças, pois ele estava escondendo elementos quando a largura/altura eram pequenas. Para a altura, coloquei `overflow-y: auto` para criar um scroll quando os elementos não cabem dentro do box. 
 
+- Nova funcionalidade: escolha de cor. Adicionado um box abaixo da imagem do robô com opção de escolha entre 6 cores (azul, amarelo, branco, preto, rosa e vermelho). Incluído um efeito de `hover` ao passar o mouse nas opções e mudança de estilo na opção escolhida. Ao selecionar uma nova cor, o `src` da imagem é alterado dinamicamente por meio do JavaScript e de data attributes.
+
 ## Modificações a serem feitas
-- deixar o usuário escolher a cor do robô;
 - criar um limite de pontos que pode ser distribuído para a quantidade de peças;
 - adaptar para mobile.
