@@ -1,9 +1,13 @@
 # Robotron 2000 🤖
 Aprendendo JavaScript, brincando de alterar os stats de um robô para salvar a Terra.
 
-Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e peças. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças, o que irá influenciar nos stats do robô. 
+Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e peças. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças, o que irá influenciar nos stats do robô. Abaixo do robô há botões de diferentes cores. Ao clicar em um botão, a cor do robô é alterada para a mesma cor do botão.
 
 Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças. Utilizou-se também de "data attributes" para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
+
+O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2000-js-dom.vercel.app
+
+![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/188231747-cbfc0650-34b8-43f2-b655-e21f4cc84f03.png)
 
 ## Créditos
 **Instrutor:** [Pedro Marins](https://github.com/pedromarins).
