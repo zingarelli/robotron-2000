@@ -38,31 +38,33 @@ main {
 }
 
 .robo {
-    height: 110%;
+    /* height: 110%; */
     z-index: 1;
     position: absolute;
-    left: -20%;
-    top: -5%;
+    left: 10%;
+    top: 5%;
+    width: 100%;
 }
 
 .titulo {
     transform: rotate(180deg);
     font-weight: 500;
-    font-size: 130px;
+    font-size: 100px;
     position: absolute;
-    bottom: 7rem;
-    left: -3rem;
+    top: 8px;
+    left: 0;
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255,255,255,0.8);
+    z-index: -1;
 }
 
 .box {
     background: rgba(0,0,0,0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
-    height: 80%;
+    overflow-y: auto;
 }
 
 /****************************** Equipamentos *****/
@@ -77,10 +79,17 @@ main {
 
 .montador-conteudo {
     padding: 2em 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
 }
 
 .peca {
-    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
 }
 
 .peca-titulo {
@@ -129,6 +138,7 @@ main {
 
 .linha {
     border-color: var(--main-cinza);
+    width: 100%; /* hr foi transformado em flex-item, então precisa ajustar seu tamanho */
 }
 
 .producao {
@@ -217,6 +227,10 @@ main {
         width: 90vw;
         height: 80vh;
         margin: 5vh auto;
+    }
+
+    .peca-titulo {
+        font-size: 2.1em;
     }
 }
 
