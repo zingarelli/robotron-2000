@@ -121,7 +121,25 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90%;
+    height: 95%;
+}
+
+.montador-disponivel {
+    color: var(--main-branco);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.disponivel-valor {
+    font-weight: 700;
+    background: var(--main-preto);
+    border-radius: 10px;
+    padding: 0 35px;
+    height: 45px;
+    display: inline-block;
+    margin-left: 15px;
 }
 
 .peca {

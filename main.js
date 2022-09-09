@@ -1,3 +1,7 @@
+//valor máximo de peças disponíveis
+const MAX_PECAS = 12;
+const pecasDisponiveis = document.querySelector('[data-disponivel]');
+
 //botões de aumentar/diminuir número de peças
 const ajustes = document.querySelectorAll('[data-operacao]');
 
@@ -14,7 +18,7 @@ const statsPorPeca = {
     "bracos": {
         "forca": 29,
         "poder": 35,
-        "energia": -21,
+        "energia": -18,
         "velocidade": -5
     },
 
@@ -29,14 +33,14 @@ const statsPorPeca = {
         "forca": 0,
         "poder": 7,
         "energia": 48,
-        "velocidade": -24
+        "velocidade": -10
     },
 
     "pernas":{
         "forca": 27,
         "poder": 21,
-        "energia": -32,
-        "velocidade": 42
+        "energia": -25,
+        "velocidade": 54
     },
 
     "foguetes":{
@@ -46,7 +50,6 @@ const statsPorPeca = {
         "velocidade": -2
     }
 }
-
 
 
 // --------------------------------- FUNÇÕES
@@ -65,15 +68,27 @@ function alteraEstiloBotao(botao){
     botao.setAttribute('data-cor-ativa', '');
 }
 
-//ajusta a quantidade de peças de acordo com a operação a ser feita
+/**
+ * O ajuste na quantidade de peças é baseado na operação a ser feita
+ * e também na quantidade de peças que há disponível. Não é aceito ajuste de 
+ * peças com valores negativos.
+ */
 function ajustaQuantidadePecas(operacao, peca){
-    const quantidade = peca.querySelector('[data-quantidade]');
+    const quantidadePeca = peca.querySelector('[data-quantidade]');
+    let quantidadeDisponivel = parseInt(pecasDisponiveis.textContent);
 
-    if(operacao === '+'){
-        quantidade.value++;
+    //necessário haver peças disponíveis para incrementar a quantidade
+    if(operacao === '+' && quantidadeDisponivel > 0){
+        quantidadePeca.value++;
+        quantidadeDisponivel--;
+        pecasDisponiveis.textContent = quantidadeDisponivel;
     }
-    else if(operacao === '-' && quantidade.value > 0){
-        quantidade.value--;
+    //não permitir subtração que deixe a quantidade negativa
+    else if(operacao === '-' && quantidadePeca.value > 0){
+        quantidadePeca.value--;
+        quantidadeDisponivel++;
+        pecasDisponiveis.textContent += 1;
+        pecasDisponiveis.textContent = quantidadeDisponivel;
     }
 }
 
@@ -133,3 +148,5 @@ botoesCor.forEach((botao) => {
     })
 })
 
+//atualiza a quantidade de peças disponíveis quando a página carrega
+pecasDisponiveis.textContent = MAX_PECAS;

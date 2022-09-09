@@ -1,13 +1,13 @@
 # Robotron 2000 🤖
 Aprendendo JavaScript, brincando de alterar os stats de um robô para salvar a Terra.
 
-Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e peças. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças, o que irá influenciar nos stats do robô. Abaixo do robô há botões de diferentes cores. Ao clicar em um botão, a cor do robô é alterada para a mesma cor do botão.
+Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e uma quantidade de peças que podem ser distribuídas para diferentes partes do robô. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças (até o limite de peças disponíveis), o que irá influenciar nos stats do robô. Abaixo do robô há botões de diferentes cores. Ao clicar em um botão, a cor do robô é alterada para a mesma cor do botão.
 
-Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças. Utilizou-se também de "data attributes" para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
+Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças ou tente incluir mais do que a quantidade de peças disponíveis. Utilizou-se também de "data attributes" para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
 
 O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2000-js-dom.vercel.app
 
-![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/188231747-cbfc0650-34b8-43f2-b655-e21f4cc84f03.png)
+![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/189413262-3c40c6c2-302e-418f-8ed8-16ea79a42dc4.png)
 
 ## Créditos
 **Instrutor:** [Pedro Marins](https://github.com/pedromarins).
@@ -30,6 +30,9 @@ O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2
 
 - Nova funcionalidade: escolha de cor. Adicionado um box abaixo da imagem do robô com opção de escolha entre 6 cores (azul, amarelo, branco, preto, rosa e vermelho). Incluído um efeito de `hover` ao passar o mouse nas opções e mudança de estilo na opção escolhida. Ao selecionar uma nova cor, o `src` da imagem é alterado dinamicamente por meio do JavaScript e de data attributes.
 
+- Nova funcionalidade: limite de peças disponíveis. Agora há uma quantidade de 12 peças disponíveis, limitando a quantidade de peças que podem ser distribuídas entre as diferentes partes do robô. Ao atingir o limite, não é possível adicionar novas peças, mas pode-se subtrair peças para distribuí-las em outras partes.  
+
+- Rebalanceamento dos stats por peça: alterei o valor dos stats concedidos por cada peça, para melhorar a distribuição dos poderes de forma mais equilibrada (estava punindo muito a energia e velocidade).
+
 ## Modificações a serem feitas
-- criar um limite de pontos que pode ser distribuído para a quantidade de peças;
 - adaptar para mobile.
