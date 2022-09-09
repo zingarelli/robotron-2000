@@ -34,5 +34,7 @@ O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2
 
 - Rebalanceamento dos stats por peça: alterei o valor dos stats concedidos por cada peça, para melhorar a distribuição dos poderes de forma mais equilibrada (estava punindo muito a energia e velocidade).
 
+- Responsividade: o layout é adaptado para diferentes tamanhos de telas (até 425px, 1200px ou 1600px).
+
 ## Modificações a serem feitas
-- adaptar para mobile.
+- modal mostrando o robô produzido

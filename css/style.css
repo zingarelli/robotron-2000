@@ -17,7 +17,8 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body,
+input {
     font-family: 'Teko', sans-serif;
 }
 
@@ -37,7 +38,7 @@ main {
     position: relative;
 }
 
-.robo{
+.robo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +57,7 @@ main {
     width: 55%;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 10px;
     clip-path: polygon(0% 15%, 5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0% 85%);
 }
@@ -65,7 +66,7 @@ main {
     width: 30px;
     aspect-ratio: 1 / 1;
     border: 2px solid var(--main-cinza);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .robo__botao-cor:hover {
@@ -78,12 +79,29 @@ main {
     cursor: auto;
 }
 
-.robo__botao-cor[data-opcao-cor='amarelo'] {background-color: #EBCB2E;}
-.robo__botao-cor[data-opcao-cor='azul'] {background-color: #5479c9;}
-.robo__botao-cor[data-opcao-cor='branco'] {background-color: #FFFFFF;}
-.robo__botao-cor[data-opcao-cor='preto'] {background-color: #353232;}
-.robo__botao-cor[data-opcao-cor='rosa'] {background-color: #E687AD;}
-.robo__botao-cor[data-opcao-cor='vermelho'] {background-color: #A63A25;}
+.robo__botao-cor[data-opcao-cor='amarelo'] {
+    background-color: #EBCB2E;
+}
+
+.robo__botao-cor[data-opcao-cor='azul'] {
+    background-color: #5479c9;
+}
+
+.robo__botao-cor[data-opcao-cor='branco'] {
+    background-color: #FFFFFF;
+}
+
+.robo__botao-cor[data-opcao-cor='preto'] {
+    background-color: #353232;
+}
+
+.robo__botao-cor[data-opcao-cor='rosa'] {
+    background-color: #E687AD;
+}
+
+.robo__botao-cor[data-opcao-cor='vermelho'] {
+    background-color: #A63A25;
+}
 
 .titulo {
     transform: rotate(180deg);
@@ -95,12 +113,12 @@ main {
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     z-index: -1;
 }
 
 .box {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     overflow-y: auto;
@@ -113,7 +131,8 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 .montador-conteudo {
@@ -146,7 +165,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 .peca-titulo {
@@ -195,7 +214,7 @@ main {
 
 .linha {
     border-color: var(--main-cinza);
-    width: 100%; /* hr foi transformado em flex-item, então precisa ajustar seu tamanho */
+    width: 100%;
 }
 
 .producao {
@@ -277,9 +296,10 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
+    body {
         font-size: 14px;
     }
+
     main {
         width: 90vw;
         height: 80vh;
@@ -292,7 +312,7 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    body { 
+    body {
         font-size: 13px;
     }
 
@@ -300,5 +320,118 @@ main {
         width: 96vw;
         height: 80vh;
         margin: 10vh auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        display: block;
+        margin: 0;
+        padding: 2em 1em;
+        width: 100%;
+        height: auto;
+    }
+
+    /* ROBÔ E CORES */
+    .robo {
+        position: relative;
+        flex-direction: row;
+        left: 0;
+    }
+
+    .robo__imagem {
+        width: 50%;
+        aspect-ratio: auto;
+    }
+
+    .robo__cores {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    /* BOX ESTATÍSTICAS */
+    .estatisticas {
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        margin: 1em auto;
+        border: none;
+    }
+
+    .estatistica {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .estatistica:nth-child(2n) .estatistica-titulo,
+    .estatistica:nth-child(2n) .estatistica-valor {
+        order: 0;
+        flex-basis: auto;
+        margin: 0;
+        text-align: left;
+    }
+
+    .estatistica-titulo,
+    .estatistica-valor,
+    .estatistica-numero {
+        border: none;
+        flex-basis: auto;
+        margin: 0;
+        position: relative;
+    }
+
+    .estatistica-titulo {
+        font-size: 2em;
+    }
+
+    .estatistica-numero {
+        top: 0;
+        width: auto;
+        transform: none;
+        font-size: 3em;
+    }
+
+    .estatistica-valor::after {
+        display: none;
+    }
+
+    /* BOX EQUIPAMENTOS */
+    .equipamentos {
+        border: none;
+    }
+
+    .montador {
+        height: auto;
+    }
+
+    .montador-disponivel,
+    .peca-titulo,
+    .controle-ajuste,
+    .controle-contador {
+        font-size: 2em;
+    }
+
+    .disponivel-valor {
+        padding: 0 20px;
+        height: 33px;
+    }
+
+    .controle {
+        float: none;
+        align-self: center;
+    }
+
+    .controle-contador {
+        padding: 0;
+        margin: 0;
+    }
+
+    .producao {
+        float: none;
+        width: 100%;
     }
 }
