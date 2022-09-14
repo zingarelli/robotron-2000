@@ -1,13 +1,22 @@
 # Robotron 2000 🤖
-Aprendendo JavaScript, brincando de alterar os stats de um robô para salvar a Terra.
 
-Na tela, são exibidas uma imagem do robô, suas estatísticas (stats) e uma quantidade de peças que podem ser distribuídas para diferentes partes do robô. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças (até o limite de peças disponíveis), o que irá influenciar nos stats do robô. Abaixo do robô há botões de diferentes cores. Ao clicar em um botão, a cor do robô é alterada para a mesma cor do botão.
+Aprendendo JavaScript e manipulação do DOM, brincando de alterar os stats de um robô para salvar a Terra.
+
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Robotron 2000**
+| :label: Tecnologias | HTML, CSS, JavaScript
+| :rocket: URL         | https://robotron2000-js-dom.vercel.app
+| :fire: Desafio     | 
+
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/189413262-3c40c6c2-302e-418f-8ed8-16ea79a42dc4.png#vitrinedev)
+
+## Detalhes do projeto
+
+Na tela do projeto, são exibidas uma imagem do robô, suas estatísticas (stats) e uma quantidade de peças que podem ser distribuídas para diferentes partes do robô. Ao clicar nos botões de `+` e `-` é possível adicionar/remover peças (até o limite de peças disponíveis), o que irá influenciar nos stats do robô. Abaixo do robô há botões de diferentes cores. Ao clicar em um botão, a cor do robô é alterada para a mesma cor do botão.
 
 Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do DOM para atualização dos valores de stats, bem como condicionantes para, por exemplo, impedir que o robô possua valores negativos nas peças ou tente incluir mais do que a quantidade de peças disponíveis. Utilizou-se também de "data attributes" para poder acessar os elementos do HTML sem a necessidade de depender das classes e id de suas tags.
-
-O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2000-js-dom.vercel.app
-
-![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/189413262-3c40c6c2-302e-418f-8ed8-16ea79a42dc4.png)
 
 ## Créditos
 **Instrutor:** [Pedro Marins](https://github.com/pedromarins).
@@ -34,7 +43,9 @@ O projeto está hospedado no Vercel e pode ser conferido aqui: https://robotron2
 
 - Rebalanceamento dos stats por peça: alterei o valor dos stats concedidos por cada peça, para melhorar a distribuição dos poderes de forma mais equilibrada (estava punindo muito a energia e velocidade).
 
-- Responsividade: o layout é adaptado para diferentes tamanhos de telas (até 425px, 1200px ou 1600px).
+- Responsividade: o layout é adaptado para diferentes tamanhos de telas (até 425px, 1200px ou 1600px). Segue abaixo como ficou o layout para celulares:
+
+![screenshot da tela para celulares](https://user-images.githubusercontent.com/19349339/190256637-314c9f36-e6a3-42c7-ad55-484c6a7b1400.png)
 
 ## Modificações a serem feitas
-- modal mostrando o robô produzido
+- Após clicar no botão de "Iniciar Produção", mostrar um Modal com o robô produzido e suas estatísticas.
