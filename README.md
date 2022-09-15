@@ -5,12 +5,12 @@ Aprendendo JavaScript e manipulação do DOM, brincando de alterar os stats de u
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **Robotron 2000**
-| :label: Tecnologias | HTML, CSS, JavaScript
+| :label: Tecnologias | html, css, javascript
 | :rocket: URL         | https://robotron2000-js-dom.vercel.app
 | :fire: Desafio     | 
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![print da tela com a página construída](https://user-images.githubusercontent.com/19349339/189413262-3c40c6c2-302e-418f-8ed8-16ea79a42dc4.png#vitrinedev)
+![](https://user-images.githubusercontent.com/19349339/189413262-3c40c6c2-302e-418f-8ed8-16ea79a42dc4.png#vitrinedev)
 
 ## Detalhes do projeto
 
