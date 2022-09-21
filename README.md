@@ -41,11 +41,16 @@ Foi utilizado o JavaScript para tratar os eventos de clique e manipulação do D
 
 - Nova funcionalidade: limite de peças disponíveis. Agora há uma quantidade de 12 peças disponíveis, limitando a quantidade de peças que podem ser distribuídas entre as diferentes partes do robô. Ao atingir o limite, não é possível adicionar novas peças, mas pode-se subtrair peças para distribuí-las em outras partes.  
 
+- Nova funcionalidade: produção do robô. Ao clicar no botão "Iniciar Produção", um modal (janela acima do conteúdo) é mostrado com uma barra de loading, simulando a produção do Robotron. A imagem e as estatísticas do robô personalizado são exibidas neste modal após 3,5 segundos.
+
 - Rebalanceamento dos stats por peça: alterei o valor dos stats concedidos por cada peça, para melhorar a distribuição dos poderes de forma mais equilibrada (estava punindo muito a energia e velocidade).
 
 - Responsividade: o layout é adaptado para diferentes tamanhos de telas (até 425px, 1200px ou 1600px). Segue abaixo como ficou o layout para celulares:
 
 ![screenshot da tela para celulares](https://user-images.githubusercontent.com/19349339/190256637-314c9f36-e6a3-42c7-ad55-484c6a7b1400.png)
 
-## Modificações a serem feitas
-- Após clicar no botão de "Iniciar Produção", mostrar um Modal com o robô produzido e suas estatísticas.
+## Projeto finalizado!
+
+Segue um gif do projeto finalizado, mostrando a seleção de cores, escolha das peças e produção do Robotron. A animação está em velocidade 1.5.
+
+![gif mostrando a personalização e produção do robô](https://user-images.githubusercontent.com/19349339/191568796-e8ac881e-43b2-4c7e-a7e3-fa37b5b223d4.gif)

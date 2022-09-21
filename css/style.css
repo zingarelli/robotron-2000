@@ -11,7 +11,7 @@
 body {
     background: url(../img/fundo.jpg);
     background-position: center center;
-    background-size: cover cover;
+    background-size: cover;
     padding: 0;
     margin: 0;
     font-weight: 300;
@@ -30,6 +30,76 @@ main {
     gap: 1vw;
 }
 
+/****************************** Modal *****/
+.modal__sucesso {
+    position: fixed;
+    top:0;
+    left:0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__container {
+    background-color: var(--main-branco);
+    border: 2px solid var(--main-preto);
+    width: 90%;
+    margin: 5% auto 0;
+    position: relative;
+}
+
+.modal__fechar {
+    position: absolute;
+    right: 0;
+    font-size: 3em;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.modal__fechar:hover {
+    background-color: var(--main-preto);
+    color: var(--main-branco);
+}
+
+.modal__titulo {
+    font-size: 3em;
+    text-transform: uppercase;
+    padding: 1em 0;
+    margin: 0;
+}
+
+.modal__loading {
+    margin-bottom: 3em;
+}
+
+.modal__robo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding-bottom: 1em;
+}
+
+.modal__imagem {
+    height: 330px;
+}
+
+.modal__estatisticas p{
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+}
+
+.modal--hide {
+    display: none;
+}
+
+/****************************** Imagem robotron *****/
 .robotron {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
@@ -332,6 +402,44 @@ main {
         height: auto;
     }
 
+    /* MODAL */
+    .modal__container {
+        width: 85%;
+    }
+
+    .modal__fechar {
+        background-color: var(--main-preto);
+        color: var(--main-branco);
+        width: 33px;
+        height: 33px;
+        font-size: 2em;
+    }
+
+    .modal__titulo{
+        font-size: 2em;
+        padding: 40px 0 0;
+    }
+
+    .modal__robo {
+        gap: 1em;
+    }
+
+    .modal__imagem {
+        height: 220px;
+    }
+    
+    .modal__estatisticas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .modal__estatisticas p {
+        margin: 0;
+        font-size: 1.5em;
+    }
+
     /* ROBÔ E CORES */
     .robo {
         position: relative;
@@ -406,6 +514,10 @@ main {
 
     .montador {
         height: auto;
+    }
+
+    .montador-conteudo {
+        border: none;
     }
 
     .montador-disponivel,

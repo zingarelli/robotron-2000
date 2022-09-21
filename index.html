@@ -10,14 +10,25 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <section class="modal__sucesso modal--hide">
+        <div class="modal__container">
+            <span class="modal__fechar">&times;</span>
+            <h2 class="modal__titulo">Produzindo seu Robotron, aguarde...</h2>
+            <img class="modal__loading" src="img/loading.gif" alt="gif de barra de loading">
+            <div class="modal__robo">
+                <img src="" alt="Robotron criado" class="modal__imagem">
+                <div class="modal__estatisticas"></div>
+            </div>
+        </div>
+    </section>
     <main>
         <section class="robotron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
             <div class="robo">
-                <img class="robo__imagem" src="img/robotron-azul.png" data-cor-robo="azul" alt="Robotron" id="robotron">
+                <img class="robo__imagem" src="img/robotron-azul.png" data-cor-robo alt="Robotron" id="robotron">
                 <div class="robo__cores">
                     <button class="robo__botao-cor" data-cor-ativa data-opcao-cor="azul" aria-label="altera cor do robô para azul"></button>
                     <button class="robo__botao-cor" data-opcao-cor="amarelo" aria-label="altera cor do robô para amarelo"></button>
@@ -33,7 +44,7 @@
             <div class="estatistica">
                 <p class="estatistica-titulo">Força</p>
                 <div class="estatistica-valor">
-                    <p class="estatistica-numero" data-stats="forca">0</p>
+                    <p class="estatistica-numero" data-stats="força">0</p>
                 </div>
             </div>
             <div class="estatistica">
