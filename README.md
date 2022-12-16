@@ -4,7 +4,7 @@ Aprendendo JavaScript e manipulação do DOM, brincando de alterar os stats de u
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Robotron 2000**
+| :sparkles: Nome        | **Robotron Teste Vitrine**
 | :label: Tecnologias | html, css, javascript
 | :rocket: URL         | https://robotron2000-js-dom.vercel.app
 | :fire: Curso     | https://www.alura.com.br/curso-online-javascript-manipulando-dom
